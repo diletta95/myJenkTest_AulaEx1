@@ -25,7 +25,7 @@ public class FizBuzzTest {
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "1");
 	}
-	/*
+	
 	@DisplayName("Play FizzBuzz with number = 3")
 	@Test
 	public void testNumber3() {
@@ -34,6 +34,7 @@ public class FizBuzzTest {
 		Assertions.assertEquals(risultato, "Fizz");
 	}
 	
+	/*
 	@DisplayName("Play FizzBuzz with number = 5")
 	@Test
 	public void testNumber5() {
