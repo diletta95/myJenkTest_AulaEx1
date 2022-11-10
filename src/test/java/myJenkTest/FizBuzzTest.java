@@ -9,13 +9,29 @@ public class FizBuzzTest {
 	public void setup() {
 		fb = new FizzBuzz();
 	}
-	
+	/*
+	@DisplayName("Play FizzBuzz with number = 0")
+	@Test
+	public void testNumber0() {
+		String risultato = fb.play(0);
+		// Verifica che il risultato sia uguale
+		Assertions.assertEquals(risultato, "Errore");
+	}
+	*/
 	@DisplayName("Play FizzBuzz with number = 1")
 	@Test
 	public void testNumber1() {
 		String risultato = fb.play(1);
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "1");
+	}
+	/*
+	@DisplayName("Play FizzBuzz with number = 3")
+	@Test
+	public void testNumber3() {
+		String risultato = fb.play(3);
+		// Verifica che il risultato sia uguale
+		Assertions.assertEquals(risultato, "Fizz");
 	}
 	
 	@DisplayName("Play FizzBuzz with number = 5")
@@ -26,16 +42,12 @@ public class FizBuzzTest {
 		Assertions.assertEquals(risultato, "Buzz");
 	}
 	
-	@DisplayName("Play FizzBuzz with number = 3")
+	@DisplayName("Play FizzBuzz with number = 15")
 	@Test
-	public void testNumber3() {
-		String risultato = fb.play(3);
+	public void testNumber15() {
+		String risultato = fb.play(15);
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "Fizz");
 	}
-	
-
-	
-	
-	
+	*/
 }
