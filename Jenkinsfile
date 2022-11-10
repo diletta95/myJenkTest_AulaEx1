@@ -18,10 +18,6 @@ pipeline {
 				}
 			}
 		}
-		post {
-	        always {
-	            emailext attachLog: true, body: 'Esito pip 2', subject: 'Esito', to: 'gigetto2022@gmail.com'
-	        }
-	    }
+		
 	}
 }
