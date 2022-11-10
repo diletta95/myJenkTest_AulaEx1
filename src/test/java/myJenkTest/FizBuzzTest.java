@@ -18,9 +18,9 @@ public class FizBuzzTest {
 			Assertions.assertEquals("0", "Dovrebbe dare errore ma non lo fa");
 		}
 		catch(IllegalArgumentException e) {
-			//String risultato = "Number must not be 0";
+			String risultato = "Number must not be 0";
 			// Verifica che il risultato sia uguale
-			Assertions.assertEquals(e.toString(), "Number must not be 0");
+			Assertions.assertEquals(risultato, "Number must not be 0");
 		}
 		
 	}
