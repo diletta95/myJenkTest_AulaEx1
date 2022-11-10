@@ -39,7 +39,7 @@ public class FizBuzzTest {
 	public void testNumber0() {
 		String risultato = fb.play(0);
 		// Verifica che il risultato sia uguale
-		Assertions.assertEquals(risultato, "0");
+		Assertions.assertEquals(risultato, "Number must not be 0");
 	}
 	
 	
