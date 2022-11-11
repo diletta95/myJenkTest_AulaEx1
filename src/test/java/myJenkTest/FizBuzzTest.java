@@ -15,6 +15,7 @@ public class FizBuzzTest {
 	public void testNumber0() {
 		try {
 			fb.play(0);
+			
 			Assertions.assertEquals("0", "Dovrebbe dare errore ma non lo fa");
 		}
 		catch(IllegalArgumentException e) {
@@ -57,5 +58,7 @@ public class FizBuzzTest {
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "Fizz");
 	}
+	
+	//test metodo play()
 	
 }
