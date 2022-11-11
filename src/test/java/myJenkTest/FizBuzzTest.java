@@ -49,7 +49,14 @@ public class FizBuzzTest {
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "Fizz");
 	}
-	
+	/*
+	@DisplayName("Play FizzBuzz with string = 3")
+	@Test
+	public void testString3() {
+		String risultato = fb.play("3");
+		// Verifica che il risultato sia uguale
+		Assertions.assertEquals(risultato, "Fizz");
+	}*/
 	
 	
 	@DisplayName("Play FizzBuzz with number = 5")
@@ -59,6 +66,14 @@ public class FizBuzzTest {
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "Buzz");
 	}
+	/*
+	@DisplayName("Play FizzBuzz with String = 5")
+	@Test
+	public void testString5() {
+		String risultato = fb.play("5");
+		// Verifica che il risultato sia uguale
+		Assertions.assertEquals(risultato, "Buzz");
+	}*/
 	
 	@DisplayName("Play FizzBuzz with number = 15")
 	@Test
@@ -77,52 +92,19 @@ public class FizBuzzTest {
 		fb.play("Ciao");
 		
 	}
-	
 	/*
-	@DisplayName("Play FizzBuzz with string = 'ciao'")
+	@Rule
+    public ExpectedException thrown0 = ExpectedException.none();	
 	@Test
-	public void testStringCiao() {
-		try {
-			String risultato = fb.play("ciao");
-			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
-		}catch (Exception e) {
-			// TODO: handle exception
-			Assertions.assertEquals("ciao", "Il metodo non accetta stringhe in input");
-		}
+	public void testFooThrowsIndexOutOfBoundsException0() {
+		thrown0.expect(IllegalArgumentException.class);
+		thrown0.expectMessage("Number must not be 0");
+		fb.play(0);
 		
 	}
 	
-	@DisplayName("Play FizzBuzz with string = '3'")
-	@Test
-	public void testString3() {
-		try {
-			String risultato = fb.play("3");
-			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
-		}catch (Exception e) {
-			// TODO: handle exception
-			Assertions.assertEquals("3", "Il metodo non accetta stringhe in input");
-		}
-		
-	}*/
-	
-	/*
-	@DisplayName("Play FizzBuzz with string input")
-	@Test
-	public void testNumberStr() throws AWTException { 
-		String input = "ciao";
-		String risultato = fb.play();
-		Robot robot = new Robot();
-		for(int idx = 0; idx<input.length(); idx++) {
-			robot.keyPress(input.toCharArray()[idx]);
-			robot.keyRelease(input.toCharArray()[idx]);
-			
-		}
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		// Verifica che il risultato sia uguale
-		Assertions.assertEquals(risultato, "Fizz");
-	}
 	*/
+	
 	
 
 }

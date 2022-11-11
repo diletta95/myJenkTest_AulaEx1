@@ -1,5 +1,4 @@
 package myJenkTest.tutorial;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -20,12 +19,22 @@ public class FizzBuzz {
 		public String play () {
 			Scanner tastiera = new Scanner (System.in);
 			System.out.println("Ciao Utonto , inserisci un numero in modo tale da non fare nulla");
-			int number= tastiera.nextInt();
-			if (number==0) throw new  IllegalArgumentException("Number must not be 0");
-			if (number%3==0)
-				return "Fizz";
-			if (number%5==0)
-				return "Buzz";
+			int number = 0;
+			try {
+				
+				number= tastiera.nextInt();
+			
+				if (number==0) throw new  IllegalArgumentException("Number must not be 0");
+				if (number%3==0)
+					return "Fizz";
+				if (number%5==0)
+					return "Buzz";
+			}catch (InputMismatchException e) {
+				// TODO: handle exception
+				throw new InputMismatchException("ti ho detto di inserire un intero!");
+			}
+			
+			
 			return String.valueOf(number);
 		}
 		
@@ -42,7 +51,7 @@ public class FizzBuzz {
 				float int_number = Float.parseFloat(number);
 				return play( int_number);
 			}catch(InputMismatchException e) {
-				throw new InputMismatchException("Number must not be 0");
+				throw new InputMismatchException("ti ho detto di inserire un intero!");
 			}
 			 
 		 }
@@ -51,8 +60,8 @@ public class FizzBuzz {
 			try {
 				float float_number = number.floatValue();
 				return play( float_number);
-			}catch(Exception e) {
-				return "ti ho detto di inserire un intero!";
+			}catch(InputMismatchException e) {
+				throw new InputMismatchException("ti ho detto di inserire un intero!");
 			}
 			 
 		 }
@@ -64,8 +73,8 @@ public class FizzBuzz {
 				}
 				int int_number = Math.round(number);
 				return play( int_number);
-			}catch(Exception e) {
-				return "ti ho detto di inserire un intero!";
+			}catch(InputMismatchException e) {
+				throw new InputMismatchException("ti ho detto di inserire un intero!");
 			}
 			 
 		 }
