@@ -26,6 +26,7 @@ public class FizBuzzTest {
 		
 	}
 	
+	
 	@DisplayName("Play FizzBuzz with number = 1")
 	@Test
 	public void testNumber1() {
