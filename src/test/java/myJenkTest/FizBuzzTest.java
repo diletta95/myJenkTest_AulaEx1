@@ -93,14 +93,14 @@ public class FizBuzzTest {
 	}
 	*/
 	
-	
 	@Rule
-    public ExpectedException thrown0 = ExpectedException.none();	
+    public ExpectedException thrown0 = ExpectedException.none();
+	@DisplayName("Play FizzBuzz with error = 0")
 	@Test
 	public void testFooThrowsIndexOutOfBoundsException0() {
 		thrown0.expect(IllegalArgumentException.class);
 		thrown0.expectMessage("Number must not be 0");
-		fb.play(0);
+		thrown0.equals(fb.play(0));
 		
 	}
 	
