@@ -15,7 +15,7 @@ public class FizzBuzz {
 	 }
 	 
 	 
-	 
+
 		public String play () {
 			Scanner tastiera= new Scanner (System.in);
 			System.out.println("Ciao Utonto , inserisci un numero in modo tale da non fare nulla");
