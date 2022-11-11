@@ -99,8 +99,8 @@ public class FizBuzzTest {
 	@Test
 	public void testFooThrowsIndexOutOfBoundsException0() {
 		thrown0.expect(IllegalArgumentException.class);
-		thrown0.expectMessage("Number must not be 0");
-		thrown0.equals(fb.play(0));
+		//thrown0.expectMessage("Number must not be 0");
+		fb.play(0);
 		
 	}
 	
