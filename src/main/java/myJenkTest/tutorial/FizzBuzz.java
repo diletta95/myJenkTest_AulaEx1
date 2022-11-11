@@ -18,7 +18,7 @@ public class FizzBuzz {
 			Scanner tastiera= new Scanner (System.in);
 			System.out.println("Ciao Utonto , inserisci un numero in modo tale da non fare nulla");
 			int number= tastiera.nextInt();
-			
+			tastiera.close();
 			if (number==0) throw new  IllegalArgumentException("Number must not be 0");
 			if (number%3==0)
 				return "Fizz";
