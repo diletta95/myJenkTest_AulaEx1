@@ -87,7 +87,7 @@ public class FizBuzzTest {
     public ExpectedException thrown = ExpectedException.none();	
 	@Test
 	public void testFooThrowsIndexOutOfBoundsException() {
-		thrown.expect(InputMismatchException.class);
+		thrown.expect(NumberFormatException.class);
 		thrown.expectMessage("ti ho detto di inserire un intero!");
 		fb.play("Ciao");
 	}
