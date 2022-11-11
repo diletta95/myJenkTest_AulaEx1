@@ -62,5 +62,7 @@ public class FizBuzzTest {
 	}
 	
 	//test metodo play()
-	
-}
+	public void main() {
+		
+	}
+	}
