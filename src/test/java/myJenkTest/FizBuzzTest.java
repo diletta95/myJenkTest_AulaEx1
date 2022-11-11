@@ -1,8 +1,12 @@
 package myJenkTest;
+import org.junit.Rule;
 import org.junit.jupiter.api.*;
+import org.junit.rules.ExpectedException;
+
 import myJenkTest.tutorial.FizzBuzz;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.InputMismatchException;
 import java.awt.AWTException;
 
 public class FizBuzzTest {
@@ -64,7 +68,44 @@ public class FizBuzzTest {
 		Assertions.assertEquals(risultato, "Fizz");
 	}
 	
-	//test metodo play()
+	@Rule
+    public ExpectedException thrown = ExpectedException.none();	
+	@Test
+	public void testFooThrowsIndexOutOfBoundsException() {
+		thrown.expect(InputMismatchException.class);
+		thrown.expectMessage("ti ho detto di inserire un intero!");
+		fb.play("Ciao");
+		
+	}
+	
+	/*
+	@DisplayName("Play FizzBuzz with string = 'ciao'")
+	@Test
+	public void testStringCiao() {
+		try {
+			String risultato = fb.play("ciao");
+			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
+		}catch (Exception e) {
+			// TODO: handle exception
+			Assertions.assertEquals("ciao", "Il metodo non accetta stringhe in input");
+		}
+		
+	}
+	
+	@DisplayName("Play FizzBuzz with string = '3'")
+	@Test
+	public void testString3() {
+		try {
+			String risultato = fb.play("3");
+			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
+		}catch (Exception e) {
+			// TODO: handle exception
+			Assertions.assertEquals("3", "Il metodo non accetta stringhe in input");
+		}
+		
+	}*/
+	
+	/*
 	@DisplayName("Play FizzBuzz with string input")
 	@Test
 	public void testNumberStr() throws AWTException { 
@@ -81,4 +122,7 @@ public class FizBuzzTest {
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "Fizz");
 	}
+	*/
+	
+
 }
