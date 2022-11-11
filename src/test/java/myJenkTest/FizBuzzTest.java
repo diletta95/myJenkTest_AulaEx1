@@ -98,9 +98,10 @@ public class FizBuzzTest {
 	@DisplayName("Play FizzBuzz with error = 0")
 	@Test
 	public void testFooThrowsIndexOutOfBoundsException0() {
+		fb.play(0); // ho messo questa riga prima
 		thrown0.expect(IllegalArgumentException.class);
 		//thrown0.expectMessage("Number must not be 0");
-		fb.play(0);
+		
 		
 	}
 	
