@@ -9,7 +9,7 @@ public class MyApp {
 	
 	public static void main(String[] args) {
 		FizzBuzz fb = new FizzBuzz();
-		fb.play();
+		fb.play("Ciao");
 
 		/*
 		System.out.println(fb.play("3"));

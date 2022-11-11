@@ -52,6 +52,8 @@ public class FizzBuzz {
 				return play( int_number);
 			}catch(InputMismatchException e) {
 				throw new InputMismatchException("ti ho detto di inserire un intero!");
+			}catch(NumberFormatException e) {
+				throw new NumberFormatException("ti ho detto di inserire un intero!");
 			}
 			 
 		 }
