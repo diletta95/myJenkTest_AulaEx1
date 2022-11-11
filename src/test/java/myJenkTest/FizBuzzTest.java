@@ -82,7 +82,7 @@ public class FizBuzzTest {
 		// Verifica che il risultato sia uguale
 		Assertions.assertEquals(risultato, "Fizz");
 	}
-	
+	/*
 	@Rule
     public ExpectedException thrown = ExpectedException.none();	
 	@Test
@@ -91,7 +91,9 @@ public class FizBuzzTest {
 		thrown.expectMessage("ti ho detto di inserire un intero!");
 		fb.play("Ciao");
 	}
-	/*
+	*/
+	
+	
 	@Rule
     public ExpectedException thrown0 = ExpectedException.none();	
 	@Test
@@ -102,7 +104,7 @@ public class FizBuzzTest {
 		
 	}
 	
-	*/
+	
 	
 	
 
