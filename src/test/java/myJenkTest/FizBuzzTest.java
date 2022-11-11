@@ -1,6 +1,9 @@
 package myJenkTest;
 import org.junit.jupiter.api.*;
 import myJenkTest.tutorial.FizzBuzz;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.awt.AWTException;
 
 public class FizBuzzTest {
 	public FizzBuzz fb;
@@ -62,5 +65,20 @@ public class FizBuzzTest {
 	}
 	
 	//test metodo play()
-	
+	@DisplayName("Play FizzBuzz with string input")
+	@Test
+	public void testNumberStr() throws AWTException { 
+		String input = "ciao";
+		String risultato = fb.play();
+		Robot robot = new Robot();
+		for(int idx = 0; idx<input.length(); idx++) {
+			robot.keyPress(input.toCharArray()[idx]);
+			robot.keyRelease(input.toCharArray()[idx]);
+			
+		}
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		// Verifica che il risultato sia uguale
+		Assertions.assertEquals(risultato, "Fizz");
+	}
 }
