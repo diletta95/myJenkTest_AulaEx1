@@ -18,5 +18,11 @@ pipeline {
 				}
 			}
 		}
+		
+		post {
+            success {
+                slackSend channel: 'jenkins-report', message: 'Execution'
+            }
+        }
 	}
 }

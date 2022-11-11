@@ -92,7 +92,7 @@ public class FizBuzzTest {
 		fb.play("Ciao");
 	}
 	*/
-	
+	/*
 	@Rule
     public ExpectedException thrown0 = ExpectedException.none();
 	@DisplayName("Play FizzBuzz with error = 0")
@@ -104,7 +104,7 @@ public class FizBuzzTest {
 		
 		
 	}
-	
+	*/
 	
 	
 	
