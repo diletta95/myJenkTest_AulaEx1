@@ -90,7 +90,6 @@ public class FizBuzzTest {
 		thrown.expect(InputMismatchException.class);
 		thrown.expectMessage("ti ho detto di inserire un intero!");
 		fb.play("Ciao");
-		
 	}
 	/*
 	@Rule

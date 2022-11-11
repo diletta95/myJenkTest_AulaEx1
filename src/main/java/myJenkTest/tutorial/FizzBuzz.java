@@ -55,7 +55,7 @@ public class FizzBuzz {
 			}
 			 
 		 }
-		
+		/*
 		public String play(Double number) {
 			try {
 				float float_number = number.floatValue();
@@ -64,7 +64,7 @@ public class FizzBuzz {
 				throw new InputMismatchException("ti ho detto di inserire un intero!");
 			}
 			 
-		 }
+		 }*/
 		
 		public String play(Float number) {
 			try {
